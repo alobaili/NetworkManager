@@ -1,6 +1,3 @@
-public struct NetworkManager {
-    public private(set) var text = "Hello, World!"
+import Foundation
 
-    public init() {
-    }
-}
+public struct NetworkManager: Networking {}
