@@ -25,6 +25,7 @@ struct ExampleError: Error {}
 
 struct NetworkManagerMock: Networking {
     var jsonDecoder: JSONDecoder = .init()
+    var requestCachePolicy: URLRequest.CachePolicy = .useProtocolCachePolicy
 
     let behavior: MockBehavior
 
