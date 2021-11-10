@@ -24,6 +24,8 @@ extension ExampleDecodable: RequestProvider {
 struct ExampleError: Error {}
 
 struct NetworkManagerMock: Networking {
+    var jsonDecoder: JSONDecoder = .init()
+
     let behavior: MockBehavior
 
     func execute(_ requestProvider: RequestProvider) async throws -> ExampleDecodable {
