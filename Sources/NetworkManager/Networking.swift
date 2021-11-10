@@ -10,14 +10,14 @@ import Foundation
 public protocol Networking {
     var jsonDecoder: JSONDecoder { get set }
 
-    func execute<T: Decodable>(_ requestProvider: RequestProvider, decoder: JSONDecoder) async throws -> T
+    func execute<T: Decodable>(_ requestProvider: RequestProvider) async throws -> T
 }
 
 public extension Networking {
-    func execute<T: Decodable>(_ requestProvider: RequestProvider, decoder: JSONDecoder = .init()) async throws -> T {
+    func execute<T: Decodable>(_ requestProvider: RequestProvider) async throws -> T {
         let (data, _) = try await URLSession.shared.data(for: requestProvider.urlRequest)
 
-        let object = try decoder.decode(T.self, from: data)
+        let object = try jsonDecoder.decode(T.self, from: data)
         return object
     }
 }
