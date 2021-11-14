@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// An abstract layer that defines the properties and functions used by ``NetworkManager``.
 public protocol Networking {
     var jsonDecoder: JSONDecoder { get set }
     var requestCachePolicy: URLRequest.CachePolicy { get set }

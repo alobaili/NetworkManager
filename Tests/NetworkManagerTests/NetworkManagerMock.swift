@@ -5,7 +5,7 @@
 //  Created by Abdulaziz AlObaili on 09/11/2021.
 //
 
-import NetworkManager
+@testable import NetworkManager
 import Foundation
 
 enum MockBehavior {

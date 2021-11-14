@@ -6,7 +6,7 @@ final class NetworkManagerTests: XCTestCase {
         let networkManager = NetworkManagerMock(behavior: .succeeding)
 
         do {
-            let _ = try await networkManager.execute(ExampleDecodable())
+            _ = try await networkManager.execute(ExampleDecodable())
         } catch {
             XCTFail("A succeeding network request should not throw.")
         }
@@ -16,7 +16,7 @@ final class NetworkManagerTests: XCTestCase {
         let networkManager = NetworkManagerMock(behavior: .failing)
 
         do {
-            let _ = try await networkManager.execute(ExampleDecodable())
+            _ = try await networkManager.execute(ExampleDecodable())
             XCTFail("A failing network request should throw.")
         } catch {
             // If there're no throws, the test is successful.
