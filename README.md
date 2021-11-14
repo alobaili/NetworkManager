@@ -7,4 +7,4 @@ This package contains documentation using DocC. If you have Xcode 13 or higher, 
 
 [NetworkManager.doccarchive.zip](https://github.com/alobaili/NetworkManager/files/7534364/NetworkManager.doccarchive.zip)
 
-Additionally, You can option+click any declaration to view its doccumentation in Xcode.
+Additionally, You can option+click any declaration to view its documentation in Xcode.
